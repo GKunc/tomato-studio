@@ -1,0 +1,55 @@
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <img class="sygnet" src="{{ROOT}}img/sygnet.svg" alt="TOMATO studio – sygnet" width="65" height="52" loading="lazy">
+        <p>Dobre życie wyrasta z dobrego projektu.<br>Trwały zysk rośnie z dobrym projektem.</p>
+      </div>
+      <div>
+        <p class="footer-title">Kontakt</p>
+        <a href="tel:+48696166002">+48&nbsp;696&nbsp;166&nbsp;002</a>
+        <a href="tel:+48512102789">+48&nbsp;512&nbsp;102&nbsp;789</a>
+        <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>
+        <p>ul. Pod Fortem 15A/3, Kraków</p>
+      </div>
+      <div>
+        <p class="footer-title">Na skróty</p>
+        <a href="{{ROOT}}realizacje.html">Realizacje</a>
+        <a href="{{ROOT}}dla-biznesu.html">Dla biznesu</a>
+        <a href="{{ROOT}}o-nas.html">O nas</a>
+        <a href="{{ROOT}}kontakt.html">Kontakt</a>
+        <!-- @if HAS_POSTS -->
+        <a href="{{ROOT}}blog/">Blog</a>
+        <!-- @endif -->
+      </div>
+      <div>
+        <p class="footer-title">Obserwuj</p>
+        <a href="https://www.instagram.com/tomatostudio.archi/">Instagram</a>
+        <a href="https://www.facebook.com/tomatostudio.interiordesign">Facebook</a>
+        <a href="https://www.linkedin.com/company/tomato-archi/">LinkedIn</a>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="footer-legal">
+        &copy; <span id="year">{{YEAR}}</span> {{BRAND}} · <a href="{{ROOT}}privacy.html">Polityka prywatności</a>
+        <!-- @if ANALYTICS=ga4 -->
+        · <button type="button" class="linklike" data-consent-open>Ustawienia cookies</button>
+        <!-- @endif -->
+        <!-- @if HAS_POSTS -->
+        · <a href="{{ROOT}}blog/feed.xml">RSS</a>
+        <!-- @endif -->
+      </p>
+    </div>
+  </footer>
+  <!-- @if ANALYTICS=ga4 -->
+  <!-- Cookie consent for Google Analytics (Consent Mode v2, nothing loads before "Akceptuję"). -->
+  <section id="consent" class="consent" aria-label="Zgoda na cookies" data-ga="{{ANALYTICS_ID}}" hidden>
+    <p>Chcielibyśmy używać plików cookies Google Analytics, żeby wiedzieć, jak odwiedzający korzystają ze strony. Ustawimy je tylko po Twojej zgodzie. <a href="{{ROOT}}privacy.html">Polityka prywatności</a></p>
+    <div class="consent-actions">
+      <button type="button" class="btn btn-accent" data-consent="granted">Akceptuję</button>
+      <button type="button" class="btn btn-light" data-consent="denied">Odrzucam</button>
+    </div>
+  </section>
+  <script src="{{ROOT}}js/consent.js" defer></script>
+  <!-- @endif -->
+  <script src="{{ROOT}}js/main.js" defer></script>
+  <script src="{{ROOT}}js/site.js" defer></script>

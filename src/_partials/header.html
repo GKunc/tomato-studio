@@ -1,0 +1,27 @@
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+  <div class="topbar">
+    <div class="wrap">
+      <p>Pracownia architektury wnętrz · Kraków, ul. Pod Fortem 15A</p>
+      <p class="hide-m"><a class="tel" href="tel:+48696166002">+48&nbsp;696&nbsp;166&nbsp;002</a> · <a class="tel" href="tel:+48512102789">+48&nbsp;512&nbsp;102&nbsp;789</a> · <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a> · <a href="https://www.instagram.com/tomatostudio.archi/">Instagram</a> · <a href="https://www.linkedin.com/company/tomato-archi/">LinkedIn</a></p>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="{{ROOT}}" aria-label="{{BRAND}} – strona główna"><img src="{{ROOT}}img/logo.svg" alt="TOMATO studio" width="175" height="46"></a>
+      <!-- One menu for every page. A page marks its link as current with a NAV value in the @vars block at its top. -->
+      <nav id="nav" aria-label="Menu główne">
+        <a href="{{ROOT}}realizacje.html"<!-- @if NAV=realizacje --> aria-current="page"<!-- @endif -->>Realizacje</a>
+        <a href="{{ROOT}}o-nas.html"<!-- @if NAV=onas --> aria-current="page"<!-- @endif -->>O nas</a>
+        <a href="{{ROOT}}kontakt.html"<!-- @if NAV=kontakt --> aria-current="page"<!-- @endif -->>Kontakt</a>
+        <!-- @if HAS_POSTS -->
+        <a href="{{ROOT}}blog/"<!-- @if NAV=blog --> aria-current="page"<!-- @endif -->>Blog</a>
+        <!-- @endif -->
+        <span class="navsep" aria-hidden="true"></span>
+        <a href="{{ROOT}}dla-biznesu.html"<!-- @if NAV=biznes --> aria-current="page"<!-- @endif -->>Dla biznesu</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-accent" href="{{ROOT}}konsultacja.html">{{CTA_LABEL}}</a>
+        <button type="button" id="mtoggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      </div>
+    </div>
+  </header>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+  <!-- @include head -->
+  <title>Bezpłatna konsultacja projektu wnętrz – 30 minut | {{BRAND}}</title>
+  <meta name="description" content="Umów 30 minut bezpłatnej konsultacji z architektem Tomato Studio – online lub w pracowni w Krakowie. Dowiesz się, ile będzie kosztował projekt i ile potrwa.">
+  <link rel="canonical" href="{{PAGE_URL}}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{BRAND}}">
+  <meta property="og:locale" content="{{LOCALE}}">
+  <meta property="og:title" content="Bezpłatna konsultacja | {{BRAND}}">
+  <meta property="og:description" content="Pogadajmy o Twoim wnętrzu, zanim wydasz pierwszą złotówkę. 30 minut, bezpłatnie.">
+  <meta property="og:url" content="{{PAGE_URL}}">
+  <meta property="og:image" content="{{SITE_URL}}/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <!-- @include header -->
+
+  <main id="main">
+    <section class="consult">
+      <div class="wrap cols">
+        <div class="consult-copy">
+          <p class="consult-kicker">Bezpłatnie · 30 minut · online lub w biurze</p>
+          <h1>Pogadajmy o Twoim wnętrzu, <span class="accent">zanim wydasz</span> pierwszą złotówkę</h1>
+          <p class="lead-muted">Przynieś rzut, zdjęcia albo same pytania. Po rozmowie będziesz wiedzieć:</p>
+          <ul class="checks">
+            <li>co warto zmienić w układzie (i czy zdążysz ze zmianami lokatorskimi),</li>
+            <li>jaki zakres projektu ma sens przy Twoim budżecie,</li>
+            <li>ile będzie kosztował projekt i ile potrwa.</li>
+          </ul>
+          <div class="person">
+            <img src="img/zespol/filip.jpg" alt="Filip Kieras" width="96" height="109">
+            <div><p class="person-name">Filip Kieras</p><p>Architekt<br><a href="tel:+48696166002">+48&nbsp;696&nbsp;166&nbsp;002</a><br><a href="mailto:filip.kieras@tomatostudio.com.pl">filip.kieras@tomatostudio.com.pl</a></p></div>
+          </div>
+          <div class="next-steps">
+            <h2>Co dalej po wysłaniu formularza?</h2>
+            <ol>
+              <li>Oddzwonimy w ciągu 24 godzin w dni robocze i ustalimy termin.</li>
+              <li>30 minut rozmowy, online lub w biurze przy Pod Fortem 15A.</li>
+              <li>Wyślemy wycenę dopasowaną do Twojego metrażu.</li>
+            </ol>
+          </div>
+          <p class="consult-quote">„Projekt spełnił w 101% nasze oczekiwania.” – <strong>Katarzyna Słupek</strong>, opinia Google</p>
+        </div>
+
+        <!-- Serwis formularza przyjmuje imię, e-mail i wiadomość; js/site.js dopisuje pozostałe odpowiedzi do wiadomości. -->
+        <!-- Formularz pojawia się sam, gdy FORM_ENDPOINT jest ustawiony (po node tools/form-worker.mjs deploy). Do tego czasu: kontakt bezpośredni. -->
+        <!-- @if FORM_ENDPOINT -->
+        <form id="lead-form" class="lead-form" action="{{FORM_ENDPOINT}}" method="post"
+              data-msg-sending="Wysyłanie…"
+              data-msg-success="Dziękujemy! Oddzwonimy w ciągu 24 godzin w dni robocze."
+              data-msg-error="Nie udało się wysłać. Spróbuj ponownie albo zadzwoń: +48 696 166 002.">
+          <h2>{{CTA_LABEL}}</h2>
+          <label>Imię<input type="text" name="name" autocomplete="given-name"></label>
+          <label>Telefon *<input type="tel" name="phone" required autocomplete="tel"></label>
+          <label class="full">E-mail *<input type="email" name="email" required autocomplete="email"></label>
+          <label>Co projektujemy?<select name="type"><option>Mieszkanie od dewelopera</option><option>Remont mieszkania</option><option>Dom</option><option>Lokal komercyjny</option><option>Inne</option></select></label>
+          <label>Metraż<select name="area"><option>do 40 m²</option><option>40–80 m²</option><option>80–150 m²</option><option>powyżej 150 m²</option></select></label>
+          <label>Gdzie rozmawiamy?<select name="where"><option>W pracowni, Pod Fortem 15A</option><option>Online</option><option>U mnie, na miejscu</option></select></label>
+          <label>Lokalizacja<input type="text" name="city" placeholder="np. Kraków, Czyżyny"></label>
+          <label>Kiedy chcesz zacząć?<select name="start"><option>W ciągu miesiąca</option><option>Za 1–3 miesiące</option><option>Za 3–6 miesięcy</option><option>Jeszcze nie wiem</option></select></label>
+          <label class="full">Budżet na wykończenie<select name="budget"><option>do 2 000 zł/m²</option><option>2 000–3 500 zł/m²</option><option>3 500–5 000 zł/m²</option><option>powyżej 5 000 zł/m²</option><option>Nie wiem, chcę o tym porozmawiać</option></select></label>
+          <label class="full">Skąd o nas wiesz?<select name="source"><option>Instagram</option><option>Facebook</option><option>Google</option><option>Polecenie</option><option>Inne</option></select></label>
+          <label class="full consent-check"><input type="checkbox" name="rodo" required> <span>Zgadzam się na kontakt w sprawie konsultacji. Administratorem danych jest {{LEGAL_ENTITY}}. <a href="privacy.html">Polityka prywatności</a></span></label>
+          <input type="hidden" name="message" value="">
+          <input type="hidden" name="_subject" value="Konsultacja – zgłoszenie ze strony {{BRAND}}">
+          <input type="hidden" name="page" value="{{PAGE_URL}}">
+          <!-- @if TURNSTILE_SITE_KEY -->
+          <div class="turnstile" data-turnstile="{{TURNSTILE_SITE_KEY}}"></div>
+          <!-- @endif -->
+          <!-- @if FORM_ACCESS_KEY -->
+          <input type="hidden" name="access_key" value="{{FORM_ACCESS_KEY}}">
+          <!-- @endif -->
+          <label class="hp" aria-hidden="true">Zostaw puste <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+          <button class="btn btn-accent" type="submit">{{CTA_LABEL}}</button>
+          <p class="form-note">Bez zobowiązań. Nie wysyłamy newsletterów bez Twojej zgody.</p>
+          <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
+        <!-- @endif -->
+        <!-- @if !FORM_ENDPOINT -->
+        <div class="lead-form">
+          <h2>{{CTA_LABEL}}</h2>
+          <p class="full lead-muted">Zadzwoń albo napisz – umówimy termin konsultacji.</p>
+          <a class="btn btn-accent" href="tel:+48696166002">+48&nbsp;696&nbsp;166&nbsp;002</a>
+          <a class="btn btn-light full" style="border:1.5px solid var(--ink)" href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>
+          <p class="form-note">Dane kontaktowe przetwarzamy zgodnie z <a href="privacy.html">polityką prywatności</a>.</p>
+        </div>
+        <!-- @endif -->
+      </div>
+    </section>
+  </main>
+
+  <!-- @include footer -->
+</body>
+</html>

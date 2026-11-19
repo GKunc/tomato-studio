@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+  <!-- Pokazywana po wysłaniu formularza, gdy przeglądarka nie ma JavaScriptu (serwis formularza przekierowuje tutaj). -->
+  <!-- @include head -->
+  <title>Wiadomość wysłana | {{BRAND}}</title>
+  <meta name="description" content="Dziękujemy za kontakt z {{BRAND}}. Twoja wiadomość została wysłana.">
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <!-- @include header -->
+  <main id="main" class="text-page">
+    <div class="wrap">
+      <article>
+        <h1>Dziękujemy, wiadomość wysłana</h1>
+        <p>Odezwiemy się w ciągu 24 godzin w dni robocze.</p>
+        <a class="btn btn-accent" href="{{ROOT}}">Wróć na stronę główną</a>
+      </article>
+    </div>
+  </main>
+  <!-- @include footer -->
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+  <!-- @include head -->
+  <title>{{PAGE_TITLE}} | {{BRAND}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <link rel="canonical" href="{{PAGE_URL}}">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <!-- @if GOOGLE_SITE_VERIFICATION -->
+  <meta name="google-site-verification" content="{{GOOGLE_SITE_VERIFICATION}}">
+  <!-- @endif -->
+  <!-- @if BING_SITE_VERIFICATION -->
+  <meta name="msvalidate.01" content="{{BING_SITE_VERIFICATION}}">
+  <!-- @endif -->
+  <link rel="preload" as="image" href="img/hero-poster.jpg" fetchpriority="high">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{BRAND}}">
+  <meta property="og:locale" content="{{LOCALE}}">
+  <meta property="og:title" content="{{PAGE_TITLE}}">
+  <meta property="og:description" content="{{META_DESCRIPTION}}">
+  <meta property="og:url" content="{{PAGE_URL}}">
+  <meta property="og:image" content="{{SITE_URL}}/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{BRAND}}: {{H1_HEADLINE}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{PAGE_TITLE}}">
+  <meta name="twitter:description" content="{{META_DESCRIPTION}}">
+  <meta name="twitter:image" content="{{SITE_URL}}/og.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "{{SITE_URL}}/#organization",
+        "name": "{{BRAND}}",
+        "url": "{{SITE_URL}}/",
+        "logo": "{{SITE_URL}}/icon-512.png",
+        "image": "{{SITE_URL}}/og.png",
+        "description": "{{META_DESCRIPTION}}",
+        "email": "{{CONTACT_EMAIL}}",
+        "telephone": ["+48696166002", "+48512102789"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Pod Fortem 15A/3",
+          "addressLocality": "Kraków",
+          "addressCountry": "PL"
+        },
+        "areaServed": ["Kraków", "Małopolska", "Podkarpacie", "Polska"],
+        "sameAs": [
+          "https://www.instagram.com/tomatostudio.archi/",
+          "https://www.facebook.com/tomatostudio.interiordesign",
+          "https://www.linkedin.com/company/tomato-archi/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{SITE_URL}}/#website",
+        "name": "{{BRAND}}",
+        "url": "{{SITE_URL}}/",
+        "inLanguage": "{{LANG}}",
+        "publisher": { "@id": "{{SITE_URL}}/#organization" }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ile kosztuje projekt wnętrz?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Zwykle to 6–12% wartości całej inwestycji – zależnie od metrażu i zakresu projektu. Dokładną wycenę przygotujemy po bezpłatnej konsultacji." }
+      },
+      {
+        "@type": "Question",
+        "name": "Odbieram mieszkanie od dewelopera. Kiedy się zgłosić?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Najlepiej przed terminem zmian lokatorskich. Wtedy przesunięcie ściany czy gniazdka nic nie kosztuje." }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy pracujecie poza Krakowem?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Tak: Małopolska i Podkarpacie na miejscu, cała Polska zdalnie." }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy muszę mieć rzut mieszkania?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nie. Rzut pomoże w wycenie, ale projekt robimy na podstawie własnego pomiaru." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- @include header -->
+  <!-- @include icons -->
+
+  <main id="main">
+    <!-- Hero: film z Willi w Tarnowie (plakat = pierwsza klatka, widoczny zanim film się wczyta) -->
+    <section class="hero">
+      <!-- [html-validate-disable-next no-autoplay -- silent decorative background film, as in the approved design; paused for reduced motion by js/site.js] -->
+      <video class="hero-media" autoplay muted loop playsinline preload="metadata" poster="img/hero-poster.jpg" aria-hidden="true">
+        <source type="video/mp4" src="video/hero.mp4">
+      </video>
+      <div class="hero-shade"></div>
+      <div class="wrap hero-body">
+        <h1>Dobre życie wyrasta<br>z dobrego projektu.</h1>
+        <div class="hero-row">
+          <p class="hero-lead">{{SUBHEADLINE}}</p>
+          <div class="btn-group">
+            <a class="btn btn-accent" href="konsultacja.html">Umów 30 min bezpłatnej konsultacji</a>
+            <a class="btn btn-outline-light" href="realizacje.html">Zobacz realizacje</a>
+          </div>
+        </div>
+        <p class="hero-caption">Willa w Tarnowie · 2026 · wizualizacja Tomato</p>
+      </div>
+      <div class="badge" aria-hidden="true">
+        <svg class="spin" viewBox="0 0 200 200" width="176" height="176"><defs><path id="bdg1" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs><circle cx="100" cy="100" r="99" fill="#FAFAF2"/><text font-family="Outfit, sans-serif" font-size="17" font-weight="600" fill="#D94C30" letter-spacing="2"><textPath href="#bdg1" textLength="498" lengthAdjust="spacing">TOMATO STUDIO · INTERIOR DESIGN · </textPath></text></svg>
+        <img src="img/sygnet.svg" alt="" width="80" height="64">
+      </div>
+    </section>
+
+    <!-- Liczby: pasek przewija się w kółko; druga kopia (aria-hidden) jest tylko dla płynności animacji -->
+    <section class="stats" aria-label="Tomato w liczbach">
+      <div class="ticker">
+        <span class="tk"><span class="tn chx">10Y+</span><span class="tl">doświadczenie</span></span><span class="dot"></span>
+        <span class="tk"><span class="tn chx">70+</span><span class="tl">zrealizowanych koncepcji</span></span><span class="dot"></span>
+        <span class="tk"><span class="tn chx">1600m²+</span><span class="tl">zaprojektowanej przestrzeni prywatnych</span></span><span class="dot"></span>
+        <span class="tk"><span class="tn chx">10 000m²+</span><span class="tl">zaprojektowanej przestrzeni komercyjnych, w tym sklepy, hotele, PRS i PBSA</span></span><span class="dot"></span>
+        <span class="tk"><span class="tn chx">4000+</span><span class="tl">stworzonych rysunków i wizualizacji</span></span><span class="dot"></span>
+        <span class="tk"><span class="tn chx">10mln+</span><span class="tl">wartość realizacji projektów prywatnych</span></span><span class="dot"></span>
+        <span class="tk" aria-hidden="true"><span class="tn chx">10Y+</span><span class="tl">doświadczenie</span></span><span class="dot"></span>
+        <span class="tk" aria-hidden="true"><span class="tn chx">70+</span><span class="tl">zrealizowanych koncepcji</span></span><span class="dot"></span>
+        <span class="tk" aria-hidden="true"><span class="tn chx">1600m²+</span><span class="tl">zaprojektowanej przestrzeni prywatnych</span></span><span class="dot"></span>
+        <span class="tk" aria-hidden="true"><span class="tn chx">10 000m²+</span><span class="tl">zaprojektowanej przestrzeni komercyjnych, w tym sklepy, hotele, PRS i PBSA</span></span><span class="dot"></span>
+        <span class="tk" aria-hidden="true"><span class="tn chx">4000+</span><span class="tl">stworzonych rysunków i wizualizacji</span></span><span class="dot"></span>
+        <span class="tk" aria-hidden="true"><span class="tn chx">10mln+</span><span class="tl">wartość realizacji projektów prywatnych</span></span><span class="dot"></span>
+      </div>
+    </section>
+
+    <section class="manifest-band">
+      <div class="wrap stack">
+        <h2 class="eyebrow">Dlaczego Tomato?</h2>
+        <p class="manifest">Bo dobry projekt, jak pomidor, musi <span class="accent">dojrzeć</span>.<br>Nie zrywamy go za wcześnie.</p>
+      </div>
+    </section>
+
+    <section id="projektujemy" class="services">
+      <div class="wrap stack">
+        <div class="split"><h2 class="h2">Projektujemy</h2><p class="hint hide-m">Najedź, żeby podejrzeć →</p></div>
+        <div class="rows rows-big">
+          <a href="realizacje.html#domy"><span class="row-num">01</span><span><span class="rowname">Domy</span></span><span class="row-desc">Dom od stanu deweloperskiego lub remont – całość albo wybrane strefy.</span><span class="row-arrow" aria-hidden="true">→</span><img class="peek" src="img/realizacje/bliz/miniatura.jpg" alt="" width="300" height="200" loading="lazy"></a>
+          <a href="realizacje.html#mieszkania"><span class="row-num">02</span><span><span class="rowname">Mieszkania</span></span><span class="row-desc">Od dewelopera, z rynku wtórnego, łączenie mieszkań.</span><span class="row-arrow" aria-hidden="true">→</span><img class="peek" src="img/realizacje/baj/miniatura.jpg" alt="" width="300" height="200" loading="lazy"></a>
+          <a href="realizacje.html#apartamenty"><span class="row-num">03</span><span><span class="rowname">Apartamenty</span></span><span class="row-desc">Duże metraże i wyższy standard wykończenia.</span><span class="row-arrow" aria-hidden="true">→</span><img class="peek" src="img/realizacje/aptar/miniatura.jpg" alt="" width="300" height="200" loading="lazy"></a>
+          <a href="realizacje.html#inwest"><span class="row-num">04</span><span><span class="rowname">Lokale inwestycyjne</span></span><span class="row-desc">Mieszkania na wynajem: trwałe, łatwe w utrzymaniu, dobrze wyglądające na zdjęciach.</span><span class="row-arrow" aria-hidden="true">→</span><img class="peek" src="img/realizacje/loktar/miniatura.jpg" alt="" width="300" height="200" loading="lazy"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wybrane realizacje: kliknięcie otwiera galerię projektu (zdjęcia 01.jpg … NN.jpg z img/realizacje/<projekt>/, NN = data-count) -->
+    <section class="band band-sand featured">
+      <div class="wrap split">
+        <h2 class="h2">Wybrane realizacje</h2>
+        <a href="realizacje.html">Wszystkie realizacje →</a>
+      </div>
+      <div class="gal" id="gal">
+        <a class="slide" href="img/realizacje/willa/01.jpg" data-gal data-count="9" data-name="Willa w Tarnowie" data-catname="Domy">
+          <span class="slide-img"><img src="img/realizacje/willa/01.jpg" alt="Willa w Tarnowie" width="1200" height="675" loading="lazy"></span>
+          <span class="slide-meta"><span class="slide-name">Willa w Tarnowie</span><span class="slide-tag">Domy · Tarnów</span></span>
+        </a>
+        <a class="slide" href="img/realizacje/bra/01.jpg" data-gal data-count="8" data-name="Dom w Bratucicach" data-catname="Domy">
+          <span class="slide-img"><img src="img/realizacje/bra/01.jpg" alt="Dom w Bratucicach" width="1200" height="675" loading="lazy"></span>
+          <span class="slide-meta"><span class="slide-name">Dom w Bratucicach</span><span class="slide-tag">Domy · Bratucice</span></span>
+        </a>
+        <a class="slide" href="img/realizacje/bliz/01.jpg" data-gal data-count="7" data-name="Bliźniak w Krakowie" data-catname="Domy">
+          <span class="slide-img"><img src="img/realizacje/bliz/01.jpg" alt="Bliźniak w Krakowie" width="1200" height="675" loading="lazy"></span>
+          <span class="slide-meta"><span class="slide-name">Bliźniak w Krakowie</span><span class="slide-tag">Domy · Kraków</span></span>
+        </a>
+        <a class="slide" href="img/realizacje/mog/01.jpg" data-gal data-count="6" data-name="Kawalerka Mogilany" data-catname="Mieszkania">
+          <span class="slide-img"><img src="img/realizacje/mog/01.jpg" alt="Kawalerka Mogilany" width="1200" height="675" loading="lazy"></span>
+          <span class="slide-meta"><span class="slide-name">Kawalerka Mogilany</span><span class="slide-tag">Mieszkania · Mogilany</span></span>
+        </a>
+        <a class="slide" href="img/realizacje/baj/01.jpg" data-gal data-count="11" data-name="Mieszkanie Bajeczna" data-catname="Mieszkania">
+          <span class="slide-img"><img src="img/realizacje/baj/01.jpg" alt="Mieszkanie Bajeczna" width="1200" height="675" loading="lazy"></span>
+          <span class="slide-meta"><span class="slide-name">Mieszkanie Bajeczna</span><span class="slide-tag">Mieszkania · Kraków</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section id="proces" class="band band-dark">
+      <div class="wrap stack" style="gap:56px">
+        <div class="split">
+          <h2 class="h2" style="max-width:700px">Jak pracujemy –<br>krok po kroku</h2>
+          <p class="band-intro">Na każdym etapie wiesz, co dostajesz i co akceptujesz. Zmiana w projekcie jest tańsza niż zmiana na budowie.</p>
+        </div>
+        <ol class="steps">
+          <li><span class="step-num">01</span><div><h3>Konsultacja i brief</h3><p>30 minut, w pracowni albo online. Potrzeby, budżet, termin. Bezpłatnie.</p></div></li>
+          <li><span class="step-num">02</span><div><h3>Pomiar na miejscu</h3><p>Mierzymy też to, czego deweloper nie podał.</p></div></li>
+          <li><span class="step-num">03</span><div><h3>Układ funkcjonalny</h3><p>Feel&amp;Look i 2 umeblowane warianty rzutu do wyboru.</p></div></li>
+          <li><span class="step-num">04</span><div><h3>Koncepcja</h3><p>Wizualizacje 3D i wstępny budżet z listy produktów. Tu zapada 70% decyzji.</p></div></li>
+          <li><span class="step-num">05</span><div><h3>Projekt wykonawczy</h3><p>Rysunki dla ekip i stolarza, specyfikacja z ilościami.</p></div></li>
+          <li><span class="step-num">06</span><div><h3>Nadzór i odbiór</h3><p>Wizyty na budowie, kontakt z ekipami, odbiór przed ostatnią fakturą.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="opinie" class="band band-sand reviews">
+      <div class="wrap stack">
+        <div class="split">
+          <h2 class="h2">Co mówią klienci</h2>
+          <a class="gbadge" href="https://www.google.com/search?q=tomato+studio+krak%C3%B3w+opinie" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#g-logo"/></svg><span>Opinie Google</span><span class="stars" aria-hidden="true">★★★★★</span><span class="more">Zobacz opinie w Google →</span></a>
+        </div>
+        <figure class="quote-main">
+          <span class="stars" role="img" aria-label="5 na 5 gwiazdek">★★★★★</span>
+          <blockquote>„Fachowa pomoc w projektowaniu wnętrz, projekt spełnił moje oczekiwania. Polecam!”</blockquote>
+          <figcaption><strong>bartek</strong> · projekt wnętrz · <svg class="gicon" aria-hidden="true"><use href="#g-logo"/></svg> opinia Google</figcaption>
+        </figure>
+        <div class="quote-grid">
+          <figure class="quote-card"><div><span class="stars" role="img" aria-label="5 na 5 gwiazdek">★★★★★</span><blockquote>„Najlepszy zespół, na jaki mogłam trafić. Dostałam świetny projekt uwzględniający wszystkie moje uwagi, a przy tym profesjonalne wsparcie w procesie wykańczania mieszkania. Realizacja na czas, bezproblemowy kontakt oraz zrozumienie i empatia podczas podejmowania ważnych decyzji – polecam!”</blockquote></div><figcaption><strong>Ewa Blada</strong> · wykończenie mieszkania · <svg class="gicon" aria-hidden="true"><use href="#g-logo"/></svg> opinia Google</figcaption></figure>
+          <figure class="quote-card"><div><span class="stars" role="img" aria-label="5 na 5 gwiazdek">★★★★★</span><blockquote>„Mieliśmy przyjemność korzystać z pomocy Bartosza, gdy wykańczaliśmy dom. Byliśmy kompletnie nieobeznani w temacie, więc to wszystko wydawało się nam czarną magią. […]”</blockquote></div><figcaption><strong>Katarzyna Sota</strong> · wykończenie domu · <svg class="gicon" aria-hidden="true"><use href="#g-logo"/></svg> opinia Google</figcaption></figure>
+          <figure class="quote-card"><div><span class="stars" role="img" aria-label="5 na 5 gwiazdek">★★★★★</span><blockquote>„Polecamy usługi Filipa, bardzo profesjonalne podejście, szybka realizacja, świetny kontakt, wszystko na najwyższym poziomie :) Projekt spełnił w 101% nasze oczekiwania.”</blockquote></div><figcaption><strong>Katarzyna Słupek</strong> · projekt wnętrza · <svg class="gicon" aria-hidden="true"><use href="#g-logo"/></svg> opinia Google</figcaption></figure>
+          <figure class="quote-card"><div><span class="stars" role="img" aria-label="5 na 5 gwiazdek">★★★★★</span><blockquote>„Remont przebiegał w 100% zgodnie z projektem, Filip przewidział wszystkie możliwe kolizje i potencjalne trudności. To architekt z dużym doświadczeniem w sporych obiektach komercyjnych, a nie projektant wnętrz z Instagrama.”</blockquote></div><figcaption><strong>Paweł Morawiecki</strong> · projekt mieszkania w kamienicy: dokumentacja techniczna i wizualizacje · <svg class="gicon" aria-hidden="true"><use href="#g-logo"/></svg> opinia Google</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="publikacje" class="band press">
+      <div class="wrap stack">
+        <h2 class="h2">Publikacje</h2>
+        <div class="rows">
+          <a href="https://www.onet.pl/styl-zycia/magazif/modern-organic-sposobem-na-oddech-dom-w-dabrowce-jako-odwrot-od-miejskiego-zgielku/hdlhcqk&#44;30bc1058" target="_blank" rel="noopener"><time class="row-num" datetime="2026-09-02">2.09.2026</time><span class="rowname"><img src="img/media/onet.svg" alt="Onet" width="113" height="36" style="height:36px" loading="lazy"></span><span class="row-desc">„Organic Modern sposobem na oddech. Dom jako odwrót od miejskiego zgiełku”</span><span class="row-arrow" aria-hidden="true">↗</span></a>
+          <a href="https://magazif.com/projekty-wnetrz/wnetrza-mieszkalne/projekty-domow/modern-organic-sposobem-na-oddech-projektu-tomato-studio/" target="_blank" rel="noopener"><time class="row-num" datetime="2026-08-09">9.08.2026</time><span class="rowname"><img src="img/media/magazif.svg" alt="MAGAZIF" width="200" height="30" style="height:30px" loading="lazy"></span><span class="row-desc">„Modern organic sposobem na oddech. Dom w Dąbrówce jako odwrót od miejskiego zgiełku”</span><span class="row-arrow" aria-hidden="true">↗</span></a>
+          <a href="https://dom.wprost.pl/wnetrza/12391185/140-metrowy-dom-w-stylu-organic-modern-minimalizm-drewno-i-design.html" target="_blank" rel="noopener"><time class="row-num" datetime="2026-07-19">19.07.2026</time><span class="rowname"><img src="img/media/dom-wprost.png" alt="Dom Wprost" width="150" height="40" style="height:40px" loading="lazy"></span><span class="row-desc">„Drewno, trawertyn i światło. 140-metrowy dom w stylu Modern Organic”</span><span class="row-arrow" aria-hidden="true">↗</span></a>
+          <a href="https://domni.pl/magazyn/spokoj-zaklety-w-naturze-140-metrowy-dom-w-stylu-organic-modern" target="_blank" rel="noopener"><time class="row-num" datetime="2026-07-16">16.07.2026</time><span class="rowname"><img src="img/media/domni.png" alt="Domni.pl" width="92" height="44" style="height:44px" loading="lazy"></span><span class="row-desc">„Spokój zaklęty w naturze. 140-metrowy dom w stylu Organic Modern”</span><span class="row-arrow" aria-hidden="true">↗</span></a>
+          <a href="https://www.nowymagazyn.pl/wnetrza/sila-detalu-140m2-w-stylu-organic-modern-od-tomato-studio/" target="_blank" rel="noopener"><time class="row-num" datetime="2026-07-16">16.07.2026</time><span class="rowname"><img src="img/media/nowy-magazyn.png" alt="Nowy Magazyn" width="111" height="60" style="height:60px" loading="lazy"></span><span class="row-desc">„Siła detalu. 140m² w stylu Organic Modern od Tomato Studio”</span><span class="row-arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Każde <summary> musi być identyczne z "name" pytania w FAQPage JSON-LD powyżej (sprawdza to tools/check.mjs). -->
+    <section id="faq" class="faq-band">
+      <div class="wrap cols">
+        <div class="stack"><h2 class="h2">Tomato Q&amp;A</h2><p class="faq-intro">Najczęstsze pytania przed rozpoczęciem projektu.</p></div>
+        <div>
+          <details class="faq"><summary>Ile kosztuje projekt wnętrz?</summary><p>Zwykle to 6–12% wartości całej inwestycji – zależnie od metrażu i zakresu projektu. Dokładną wycenę przygotujemy po bezpłatnej konsultacji.</p></details>
+          <details class="faq"><summary>Odbieram mieszkanie od dewelopera. Kiedy się zgłosić?</summary><p>Najlepiej przed terminem zmian lokatorskich. Wtedy przesunięcie ściany czy gniazdka nic nie kosztuje.</p></details>
+          <details class="faq"><summary>Czy pracujecie poza Krakowem?</summary><p>Tak: Małopolska i Podkarpacie na miejscu, cała Polska zdalnie.</p></details>
+          <details class="faq"><summary>Czy muszę mieć rzut mieszkania?</summary><p>Nie. Rzut pomoże w wycenie, ale projekt robimy na podstawie własnego pomiaru.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="band-accent talk">
+      <div class="wrap">
+        <p class="eyebrow">Porozmawiaj bezpośrednio z architektem</p>
+        <a class="mega" href="konsultacja.html">Pogadajmy →</a>
+        <div class="badge" aria-hidden="true">
+          <svg class="spin" viewBox="0 0 200 200" width="170" height="170"><defs><path id="bdg2" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs><circle cx="100" cy="100" r="99" fill="#FAFAF2"/><text font-family="Outfit, sans-serif" font-size="17" font-weight="600" fill="#D94C30" letter-spacing="2"><textPath href="#bdg2" textLength="498" lengthAdjust="spacing">TOMATO STUDIO · INTERIOR DESIGN · </textPath></text></svg>
+          <img src="img/sygnet.svg" alt="" width="78" height="63" loading="lazy">
+        </div>
+        <div class="talk-foot">
+          <p>30 minut bezpłatnych konsultacji.<br>Wyślij nam rzut, opowiedz, jak żyjesz, a resztę zrobimy za Ciebie.</p>
+          <div class="btn-group">
+            <a class="btn btn-light" href="konsultacja.html">{{CTA_LABEL}}</a>
+            <a class="btn btn-outline-light" href="tel:+48696166002">+48&nbsp;696&nbsp;166&nbsp;002</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- @include lightbox -->
+  <!-- @include footer -->
+  <script src="js/webmcp.js" defer></script>
+</body>
+</html>

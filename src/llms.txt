@@ -1,0 +1,32 @@
+# {{BRAND}}
+
+> {{META_DESCRIPTION}}
+
+{{LLMS_SUMMARY}}
+
+## Najważniejsze fakty
+
+- Adres pracowni: ul. Pod Fortem 15A/3, Kraków
+- Telefon: +48 696 166 002, +48 512 102 789; e-mail: {{CONTACT_EMAIL}}
+- Klienci prywatni: domy, mieszkania, apartamenty, lokale inwestycyjne (mieszkania na wynajem)
+- Klienci biznesowi: hotele, gastronomia, PRS, PBSA (akademiki), biura
+- Proces: konsultacja i brief, pomiar, układ funkcjonalny, koncepcja z wizualizacjami 3D, projekt wykonawczy, nadzór i odbiór
+- Koszt projektu wnętrz: zwykle 6–12% wartości całej inwestycji; dokładna wycena po bezpłatnej konsultacji
+- Zespół: architekci Filip Kieras (dyrektor kreatywny) i Bartosz Młynarski (dyrektor zarządzający), absolwenci Politechniki Krakowskiej
+
+## Strony
+
+- [Strona główna]({{SITE_URL}}/): {{PAGE_TITLE}}
+- [Realizacje]({{SITE_URL}}/realizacje.html): galerie projektów domów, mieszkań, apartamentów i lokali inwestycyjnych
+- [Dla biznesu]({{SITE_URL}}/dla-biznesu.html): wnętrza komercyjne – sektory, doświadczenie, proces, zapytanie
+- [O nas]({{SITE_URL}}/o-nas.html): zespół, pracownia i narzędzia
+- [Kontakt]({{SITE_URL}}/kontakt.html): telefony, e-mail, adres
+- [Bezpłatna konsultacja]({{SITE_URL}}/konsultacja.html): formularz zgłoszenia na 30-minutową konsultację
+- [Polityka prywatności]({{SITE_URL}}/privacy.html): jak przetwarzamy dane osobowe
+
+<!-- @if HAS_POSTS -->
+## Blog
+
+- [Wszystkie artykuły]({{SITE_URL}}/blog/): lista wpisów
+<!-- @posts -->
+<!-- @endif -->
