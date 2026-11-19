@@ -9,10 +9,9 @@
   <link rel="alternate" type="application/rss+xml" title="{{BRAND}} blog" href="{{ROOT}}blog/feed.xml">
   <!-- @endif -->
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap">
-  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f%5B%5D=chillax@600%2C700&amp;display=swap">
+  <link rel="preload" href="{{ROOT}}fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ROOT}}fonts/outfit-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ROOT}}fonts/chillax-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ROOT}}css/styles.css">
   <!-- Analytics: chosen with ANALYTICS / ANALYTICS_ID in site.config.json. GA4 loads only after consent (js/consent.js). -->
   <!-- @if ANALYTICS=plausible -->
